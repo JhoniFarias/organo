@@ -1,0 +1,4 @@
+<h1>{{ genero().value }}</h1>
+@for (livro of genero().livros; track $index) {
+<app-livro [livro]="livro"></app-livro>
+}
