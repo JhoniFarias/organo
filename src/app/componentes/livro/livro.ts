@@ -7,7 +7,7 @@ export interface Livro {
 }
 
 export interface GeneroLiterario {
-  id: number;
+  id: string;
   value: string;
   livros: Livro[];
 }

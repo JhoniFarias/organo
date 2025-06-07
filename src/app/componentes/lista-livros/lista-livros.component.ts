@@ -20,15 +20,18 @@ export class ListaLivrosComponent {
 
   private carregarLivrosAgrupadosPorGenero() {
     let generos = this.livros.map((livro) => {
-      return livro.genero.value;
+      return { id: livro.genero.id, value: livro.genero.value };
     });
     generos = [...new Set(generos)];
+    generos.push({ id: 'financas', value: 'Finanças' });
+
+    console.log(generos);
 
     this.generosLiterarios = generos.map((genero, index) => {
       return {
-        id: index,
-        value: genero,
-        livros: this.livros.filter((livro) => livro.genero.value === genero),
+        id: genero.id,
+        value: genero.value,
+        livros: this.livros.filter((livro) => livro.genero.id === genero.id),
       };
     });
   }
