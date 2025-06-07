@@ -1,59 +1,73 @@
 # Organo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Organo é uma aplicação web desenvolvida em Angular 19 para organizar e visualizar livros por gêneros literários. O projeto demonstra o uso de recursos modernos do Angular, incluindo componentes standalone, diretivas estruturais avançadas e tipagem aprimorada.
 
-## Development server
+## Sobre o Projeto
 
-To start a local development server, run:
+O Organo permite que usuários visualizem uma lista de livros agrupados por gênero, com destaque visual para cada categoria. É possível marcar livros como favoritos, e o layout é responsivo e moderno, utilizando CSS custom properties e boas práticas de componentização.
+
+## Funcionalidades
+
+- Listagem de livros agrupados por gênero literário
+- Marcação de livros como favoritos
+- Componentização modular e reutilizável
+- Layout responsivo e estilização customizada
+- Uso de imagens locais e remotas para capas de livros
+
+## Recursos do Angular 19 Utilizados
+
+Este projeto faz uso dos principais recursos introduzidos ou aprimorados no Angular 19:
+
+- **Componentes Standalone:** Todos os componentes (`AppComponent`, `CabecalhoComponent`, `RodapeComponent`, `ListaLivrosComponent`, `GeneroLiterarioComponent`, `LivroComponent`) são standalone, dispensando a necessidade de módulos NgModule.
+- **Diretivas estruturais @for e @if:** Utilização das novas diretivas estruturais reativas para renderização condicional e iteração em templates, proporcionando melhor performance e legibilidade.
+- **Input Signals:** Uso do novo decorator `input` para propriedades de entrada, permitindo reatividade aprimorada e integração com signals.
+- **Configuração simplificada de rotas:** Uso do `provideRouter` diretamente na configuração da aplicação.
+- **Zone-Less Change Detection:** Configuração de detecção de mudanças com `provideZoneChangeDetection`, otimizando a performance.
+- **Strict Typing:** Projeto configurado com tipagem estrita no TypeScript e Angular, aumentando a segurança e robustez do código.
+
+## Como executar o servidor de desenvolvimento
+
+Para iniciar o servidor de desenvolvimento local, execute:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois, acesse [http://localhost:4200/](http://localhost:4200/) no navegador. O aplicativo será recarregado automaticamente a cada alteração nos arquivos fonte.
 
-## Code scaffolding
+## Gerando componentes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para criar um novo componente standalone, utilize:
 
 ```bash
-ng generate component component-name
+ng generate component component-name --standalone
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ver todos os schematics disponíveis:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Build
 
-To build the project run:
+Para compilar o projeto:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os artefatos serão gerados na pasta `dist/`.
 
-## Running unit tests
+## Testes unitários
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para rodar os testes unitários com o Karma:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Recursos adicionais
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Documentação Angular CLI](https://angular.dev/tools/cli)
+- [Novidades do Angular 19](https://blog.angular.io/angular-v19-is-now-available-6b7a2c0b2c4e)
